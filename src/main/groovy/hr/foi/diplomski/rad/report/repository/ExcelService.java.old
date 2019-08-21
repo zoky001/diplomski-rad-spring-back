@@ -1,0 +1,657 @@
+package hr.zaba.ewm.rispo.service.impl;
+
+import hr.zaba.ewm.rispo.constants.ClientColumns;
+import hr.zaba.ewm.rispo.constants.ExposureColumns;
+import hr.zaba.ewm.rispo.converters.ConverterService;
+import hr.zaba.ewm.rispo.core.CodebookEntry;
+import hr.foi.diplomski.rad.model.client.Client;
+import hr.foi.diplomski.rad.model.exposure.Collateral;
+import hr.foi.diplomski.rad.model.exposure.Exposure;
+import hr.foi.diplomski.rad.model.exposure.InterestRateReference;
+import hr.foi.diplomski.rad.model.group.Group;
+
+import java.awt.Font;
+import java.awt.font.FontRenderContext;
+import java.awt.font.LineBreakMeasurer;
+import java.awt.font.TextAttribute;
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.text.AttributedString;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.CellReference;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.google.common.base.Strings;
+
+@Service
+public class ExcelService
+{
+
+	private static final String EMPTY_CELL_VALUE = "-";
+
+	private static final Logger log = Logger.getLogger(ExcelService.class);
+
+	private final float NORMAL_ROW_HEIGHT = 12.75f;
+	private final float SMALL_ROW_HEIGHT = 3;
+
+	private final int CLIENTS_TABLE_START = 8;
+
+	private final int EXPOSURES_TABLE_START = 55;
+	private final int EXPOSURES_TABLE_END = 535;
+
+	private final int INTERESTS_ROW = 638;
+	private final int FEES_ROW = 639;
+
+	private final int TOTAL_LEVEL_2_ROWS = 5;
+
+	private final int ROWS_TO_HIDE = 13;
+
+	private final double INDUSTRY_COLUMN_WIDTH = 205.595703125;
+	private final double BORROWER_COLUMN_WIDTH = 177.8125;
+	private final double OWNERSHIP_COLUMN_WIDTH = 263.9404296875;
+
+	private final double TAKER_COLUMN_WIDTH = 119.4677734375;
+	private final double COLLATERALS_COLUMN_WIDTH = 161.142578125;
+	private final double TYPE_OF_CREDIT_COLUMN_WIDTH = 125.0244140625;
+	private final double TENOR_COLUMN_WIDTH = 50.009765625;
+	private final double CONDITIONS_COLUMN_WIDTH = 83.349609375;
+	private final double TYPE_COLUMN_WIDTH = 88.90625;
+	private final double RISK_CLASS_COLUMN_WIDTH = 138.916015625;
+
+
+	@Autowired
+	private ConverterService converterService;
+
+	public Workbook populateWorkbook(Group group, Date date, String exportCurrency) throws EncryptedDocumentException, InvalidFormatException, IOException
+	{
+		HSSFWorkbook wb = loadTemplate();
+
+		HSSFSheet sheet = wb.getSheetAt(0);
+		getCellByReference(sheet, "H1").setCellValue(group.getName());
+		getCellByReference(sheet, "P4").setCellValue(date);
+		getCellByReference(sheet, "B53").setCellValue("UniCredit Group (amounts in T" + exportCurrency + ")");
+		getCellByReference(sheet, "A567").setCellValue("Credit Lines in T" + exportCurrency + " (inclusive of indirect Risks) according UCI Rules");
+		getCellByReference(sheet, "A583").setCellValue("Credit Lines in T" + exportCurrency + " according BACA Rules");
+		getCellByReference(sheet, "A610").setCellValue("Credit Lines in T" + exportCurrency + " (inclusive of indirect Risks) according UCI Rules*)");
+		getCellByReference(sheet, "A626").setCellValue("Credit Lines in T" + exportCurrency + " according BACA Rules");
+
+		populateClients(group, sheet);
+		populateExposures(group, sheet, exportCurrency, wb);
+		wb.setForceFormulaRecalculation(true);
+		return wb;
+	}
+
+	private void populateClients(Group group, Sheet sheet)
+	{
+		int index = CLIENTS_TABLE_START;  // 8
+		for (Client member : group.getMembers())
+		{
+			if (!member.getExposures().isEmpty())
+			{
+				try
+				{
+					Row row = sheet.getRow(index++);
+					row.setZeroHeight(false);
+
+					if (member.getBorrower() != null)
+					{
+						row.getCell(ClientColumns.BORROWER).setCellValue(member.getBorrower());
+						row.getCell(ClientColumns.BORROWER).getCellStyle().setWrapText(true);
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.BORROWER);
+					}
+
+					if (member.getSndg() != null)
+					{
+						row.getCell(ClientColumns.SNDG).setCellValue(member.getSndg());
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.SNDG);
+					}
+
+					if (member.getCountry() != null)
+					{
+						row.getCell(ClientColumns.COUNTRY).setCellValue(member.getCountry());
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.COUNTRY);
+					}
+
+					if (member.getIntRating() != null)
+					{
+						row.getCell(ClientColumns.INT_RATING).setCellValue(member.getIntRating().getName());
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.INT_RATING);
+					}
+
+					row.getCell(ClientColumns.FINANCIALS_ENCLOSED).setCellValue(member.isFinancialsEnclosed() ? "Y" : "N");
+					if (member.getIndustry() != null)
+					{
+						row.getCell(ClientColumns.ACTIVITY_INDUSTRY).setCellValue(member.getIndustry());
+						row.getCell(ClientColumns.ACTIVITY_INDUSTRY).getCellStyle().setWrapText(true);
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.ACTIVITY_INDUSTRY);
+					}
+
+					if (!Strings.isNullOrEmpty(member.getOwnerName()))
+					{
+						row.getCell(ClientColumns.OWNERSHIP_SHAREHOLDERS).setCellValue(member.getOwnerName());
+						row.getCell(ClientColumns.OWNERSHIP_SHAREHOLDERS).getCellStyle().setWrapText(true);
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.OWNERSHIP_SHAREHOLDERS);
+					}
+
+					if (member.getRatingRelation() != null)
+					{
+						row.getCell(ClientColumns.RATING_RELATION).setCellValue(member.getRatingRelation().getName());
+					}
+					else
+					{
+						setEmptyCellValue((HSSFRow) row, ClientColumns.RATING_RELATION);
+					}
+
+					calculateClientRowHeight(sheet, member, row);
+				}
+				catch (Exception e)
+				{
+					log.error("Greska kod izvoza klijenta sa MB " + member.getMb(), e);
+				}
+			}
+		}
+	}
+
+	private void populateExposures(Group group, HSSFSheet sheet, String exportCurrency, HSSFWorkbook workbook)
+	{
+		int index = EXPOSURES_TABLE_START; //54
+		int numberOfShiftedRows = 0;
+		int clientIndex = 1;
+		List<HSSFCellStyle> styles = prepareStyles(sheet.getRow(index), workbook);
+		for (Client member : group.getMembers())
+		{
+			if (!member.getExposures().isEmpty())
+			{
+				int numberOfRowsToShift = member.getExposures().size() - 5; // koliko redaka je već insertirano
+				numberOfRowsToShift = Math.max(0, numberOfRowsToShift);
+				if (numberOfRowsToShift > 0)
+				{
+					sheet.shiftRows(index + 1, sheet.getLastRowNum(), numberOfRowsToShift);
+				}
+				sheet.getRow(index).setHeightInPoints(NORMAL_ROW_HEIGHT);
+				sheet.getRow(index).setZeroHeight(false);
+				sheet.getRow(index).setHeight((short) -1);
+				numberOfShiftedRows += numberOfRowsToShift;
+				for (Exposure e : member.getExposures())
+				{
+					HSSFRow row = sheet.getRow(index);
+					if (row == null)
+					{
+						row = sheet.createRow(index);
+					}
+					populateExposure(e, row, styles, clientIndex, group.getCurrency(), exportCurrency);
+					index++;
+					calculateExposureRowHeight(sheet, e, exportCurrency, row);
+				}
+
+				//inicijalno je postavljeno 5 redaka, ako je manje sakrij one koji nisu popunjeni.
+				int exposuresTotalRows = member.getExposures().size();
+				for (int i = 5; i > exposuresTotalRows; i--)
+				{
+					sheet.getRow(index++).setZeroHeight(true);
+				}
+
+				sheet.getRow(index).setHeightInPoints(SMALL_ROW_HEIGHT);
+				sheet.getRow(index++).setZeroHeight(false);
+				sheet.getRow(index).setHeightInPoints(NORMAL_ROW_HEIGHT);
+				sheet.getRow(index++).setZeroHeight(false);
+				index = index + TOTAL_LEVEL_2_ROWS;
+				clientIndex++;
+			}
+		}
+
+
+		hideEmptyExposuresFromTable(sheet, index, numberOfShiftedRows, clientIndex);
+
+		populateInterestsAndFees(group, sheet, numberOfShiftedRows, exportCurrency);
+
+		hideOrShowTables(sheet);
+
+	}
+
+	private void hideEmptyExposuresFromTable(HSSFSheet sheet, int index, int numberOfShiftedRows, int clientIndex)
+	{
+		int lastIndex = index;
+		index = EXPOSURES_TABLE_END;
+		if (lastIndex > EXPOSURES_TABLE_END)
+		{
+			//numberOfRowsToHide is last populated row - original table ending + (max clients - populated clients + 1) * 2
+			//last part is a calculation based that a function have pre-populated 2 rows per client, so we need to take it into account
+			//int numberOfRowsToHide = lastIndex - EXPOSURES_TABLE_END  + (40 - clientIndex + 1) * 2;
+			int numberOfRowsToHide = (40 - clientIndex + 1) * 12;
+			numberOfRowsToHide = numberOfRowsToHide + ROWS_TO_HIDE; // ROWS_TO_HIDE - sakrivanje do "Customer Group AL 1 Total*)"
+			for (int i = 0; i < numberOfRowsToHide; i++)
+			{
+				sheet.getRow(lastIndex++).setZeroHeight(true);
+			}
+		}
+		else
+		{
+			for (int i = 0; i < (numberOfShiftedRows + ROWS_TO_HIDE); i++) // ROWS_TO_HIDE - sakrivanje do "Customer Group AL 1 Total*)"
+			{
+				sheet.getRow(index++).setZeroHeight(true);
+			}
+		}
+	}
+
+	private void hideOrShowTables(HSSFSheet sheet)
+	{
+		for (Row row : sheet)
+		{
+			for (Cell cell : row)
+			{
+				if (cell.getCellType() == Cell.CELL_TYPE_STRING)
+				{
+					if (cell.getRichStringCellValue().getString().matches("(.*)specific information required by BACA only:(.*)"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow; i < currentRow + 10; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(true);
+						}
+					}
+					else if (cell.getRichStringCellValue().getString().matches("(.*)Credit Lines in THRK according BACA Rules(.*)"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow; i < currentRow + 10; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(true);
+						}
+					}
+					else if (cell.getRichStringCellValue().getString().matches("(.*)Customer Group AL 1 Total(.*)"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow - 1; i < currentRow + 17; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(false);
+						}
+					}
+					else if (cell.getRichStringCellValue().getString().matches("(.*)Credit Lines in THRK [(]inclusive of indirect Risks[)] according UCI Rules(.*)"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow - 1 ; i < currentRow + 17; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(false);
+						}
+					}
+					else if (cell.getRichStringCellValue().getString().matches("(.*)Control lines"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow - 1 ; i < currentRow + 12; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(false);
+						}
+					}
+					else if (cell.getRichStringCellValue().getString().matches("(.*)Total interests"))
+					{
+						int currentRow = row.getRowNum();
+
+						for (int i = currentRow  - 1 ; i < currentRow + 7; i++)
+						{
+							if(sheet.getRow(i) != null)
+								sheet.getRow(i).setZeroHeight(false);
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+
+	private void populateInterestsAndFees(Group group, HSSFSheet sheet, int numberOfShiftedRows, String currency)
+	{
+
+		double interests = converterService.convert(group.getIntRateHRK(), group.getIntRateEUR(), true, currency, 2).doubleValue();
+
+		Row interestsRow = sheet.getRow(INTERESTS_ROW + numberOfShiftedRows);
+		interestsRow.getCell(3).setCellValue(interests);
+
+		interestsRow.getCell(3).getCellStyle().setFillPattern(CellStyle.NO_FILL);
+
+		interestsRow.getCell(5).setCellValue(interests);
+		interestsRow.getCell(6).setCellValue(interests);
+
+		double fees = converterService.convert(group.getFeesHRK(), group.getFeesEUR(), true, currency, 2).doubleValue();
+
+		Row feesRow = sheet.getRow(FEES_ROW + numberOfShiftedRows);
+		feesRow.getCell(3).setCellValue(fees);
+		feesRow.getCell(3).getCellStyle().setFillPattern(CellStyle.NO_FILL);
+
+		feesRow.getCell(5).setCellValue(fees);
+		feesRow.getCell(6).setCellValue(fees);
+	}
+
+	private void populateExposure(Exposure e, HSSFRow row, List<HSSFCellStyle> styles, int index, String groupCurrency, String exportCurrency)
+	{
+
+		row.createCell(ExposureColumns.INDEX).setCellStyle(styles.get(ExposureColumns.INDEX));
+		row.getCell(ExposureColumns.INDEX).setCellValue(index);
+
+		row.createCell(ExposureColumns.TYPE_OF_CREDIT).setCellStyle(styles.get(ExposureColumns.TYPE_OF_CREDIT));
+
+		String typeOfCredit = e.getTypeOfCredit();
+
+		if (typeOfCredit == null)
+		{
+			setEmptyCellValue(row, ExposureColumns.TYPE_OF_CREDIT);
+		}
+		else
+		{
+			row.getCell(ExposureColumns.TYPE_OF_CREDIT).setCellValue(e.getTypeOfCredit());
+			row.getCell(ExposureColumns.TYPE_OF_CREDIT).getCellStyle().setWrapText(true);
+		}
+
+		row.createCell(ExposureColumns.TENOR).setCellStyle(styles.get(ExposureColumns.TENOR));
+
+		String tenor = e.getTenor();
+
+		if (tenor == null)
+		{
+			setEmptyCellValue(row, ExposureColumns.TENOR);
+		}
+		else
+		{
+			row.getCell(ExposureColumns.TENOR).setCellValue(tenor);
+			row.getCell(ExposureColumns.TENOR).getCellStyle().setWrapText(true);
+		}
+
+		populateBigDecimalColumn(ExposureColumns.PREVIOUS, e.getPreviousHrk(), e.getPreviousEur(), exportCurrency, row, styles);
+		populateBigDecimalColumn(ExposureColumns.CHANGE, e.getChangeHrk(), e.getChangeEur(), exportCurrency, row, styles);
+		populateBigDecimalColumn(ExposureColumns.PROPOSED, e.getProposedHrk(), e.getProposedEur(), exportCurrency, row, styles);
+		populateBigDecimalColumn(ExposureColumns.BALANCE, e.getBalanceHrk(), e.getBalanceEur(), exportCurrency, row, styles);
+
+		row.createCell(ExposureColumns.CONDITIONS).setCellStyle(styles.get(ExposureColumns.CONDITIONS));
+
+		String conditions = e.getConditions();
+
+		if (conditions.isEmpty())
+		{
+			setEmptyCellValue(row, ExposureColumns.CONDITIONS);
+		}
+		else
+		{
+			row.getCell(ExposureColumns.CONDITIONS).setCellValue(conditions);
+		}
+
+		row.getCell(ExposureColumns.CONDITIONS).getCellStyle().setWrapText(true);
+
+		if (e.getInterestRate() != null)
+		{
+			addInterestRateComment(row.getCell(ExposureColumns.CONDITIONS), e.getInterestRate());
+		}
+
+		row.createCell(ExposureColumns.COLLATERALS).setCellStyle(styles.get(ExposureColumns.COLLATERALS));
+
+		String collateralsAsString = getCollateralsAsString(e.getCollaterals(), exportCurrency);
+
+		row.getCell(ExposureColumns.COLLATERALS).setCellValue(collateralsAsString);
+		row.getCell(ExposureColumns.COLLATERALS).getCellStyle().setWrapText(true);
+		if (EMPTY_CELL_VALUE.equalsIgnoreCase(collateralsAsString))
+		{
+			row.getCell(ExposureColumns.COLLATERALS).getCellStyle().setAlignment(HSSFCellStyle.ALIGN_CENTER);
+		}
+
+		populateBigDecimalColumn(ExposureColumns.SECURED_PREVIOUS, e.getSecuredPreviousHrk(), e.getSecuredPreviousEur(), exportCurrency, row, styles);
+		populateBigDecimalColumn(ExposureColumns.SECURED_PROPOSED, e.getSecuredProposedHrk(), e.getSecuredProposedEur(), exportCurrency, row, styles);
+		populateBigDecimalColumn(ExposureColumns.SECURED_BALANCE, e.getSecuredBalanceHrk(), e.getSecuredBalanceEur(), exportCurrency, row, styles);
+
+		row.createCell(ExposureColumns.ACTUAL_BORROWER).setCellStyle(styles.get(ExposureColumns.ACTUAL_BORROWER));
+		setEmptyCellValue(row, ExposureColumns.ACTUAL_BORROWER);
+		row.createCell(ExposureColumns.BALANCE_BORROWER).setCellStyle(styles.get(ExposureColumns.BALANCE_BORROWER));
+		setEmptyCellValue(row, ExposureColumns.BALANCE_BORROWER);
+
+		row.createCell(ExposureColumns.LESS_THAN_YEAR).setCellStyle(styles.get(ExposureColumns.LESS_THAN_YEAR));
+		if (e.getTenor() != null)
+		{
+			row.getCell(ExposureColumns.LESS_THAN_YEAR).setCellValue(e.isLessThanYear() ? "Y" : "N");
+		}
+		else
+		{
+			setEmptyCellValue(row, ExposureColumns.LESS_THAN_YEAR);
+		}
+
+		populateCodebookColumn(ExposureColumns.TYPE, e.getPlasmanType(), row, styles);
+
+		row.createCell(ExposureColumns.COMITTED).setCellStyle(styles.get(ExposureColumns.COMITTED));
+		row.getCell(ExposureColumns.COMITTED).setCellValue(e.isCommited() ? "Y" : "N");
+
+		populateCodebookColumn(ExposureColumns.TAKER, e.getTaker(), row, styles);
+		row.getCell(ExposureColumns.TAKER).getCellStyle().setWrapText(true);
+
+		populateCodebookColumn(ExposureColumns.RISK_CLASS, e.getRiskClass(), row, styles);
+		row.getCell(ExposureColumns.RISK_CLASS).getCellStyle().setWrapText(true);
+
+		row.setZeroHeight(false);
+	}
+
+	private void setEmptyCellValue(HSSFRow row, int column)
+	{
+		row.getCell(column).setCellValue(EMPTY_CELL_VALUE);
+		row.getCell(column).getCellStyle().setAlignment(HSSFCellStyle.ALIGN_CENTER);
+	}
+
+	private void addInterestRateComment(HSSFCell cell, InterestRateReference interestRate)
+	{
+		Drawing drawing = cell.getSheet().createDrawingPatriarch();
+
+		CreationHelper factory = cell.getSheet().getWorkbook().getCreationHelper();
+		// When the comment box is visible, have it show in a 1x3 space
+		ClientAnchor anchor = factory.createClientAnchor();
+		anchor.setCol1(cell.getColumnIndex());
+		anchor.setCol2(cell.getColumnIndex() + 3);
+		anchor.setRow1(cell.getRow().getRowNum());
+		anchor.setRow2(cell.getRow().getRowNum() + 3);
+
+		// Create the comment and set the text+author
+		Comment comment = drawing.createCellComment(anchor);
+		RichTextString str = factory.createRichTextString(interestRate.getName() + " = " + interestRate.getDescription());
+		comment.setString(str);
+
+		// Assign the comment to the cell
+		cell.setCellComment(comment);
+
+	}
+
+	private void populateBigDecimalColumn(int columnIndex, BigDecimal columnValueHrk, BigDecimal columnValueEur, String exportCurrency, HSSFRow row, List<HSSFCellStyle> styles)
+	{
+		row.createCell(columnIndex).setCellStyle(styles.get(columnIndex));
+		if (("HRK".equals(exportCurrency) && columnValueHrk != null) || ("EUR".equals(exportCurrency) && columnValueEur != null))
+		{
+			row.getCell(columnIndex).setCellValue(converterService.convert(columnValueHrk, columnValueEur, true, exportCurrency, 2).doubleValue());
+		}
+	}
+
+	private void populateCodebookColumn(int columnIndex, CodebookEntry columnValue, HSSFRow row, List<HSSFCellStyle> styles)
+	{
+		row.createCell(columnIndex).setCellStyle(styles.get(columnIndex));
+		if (columnValue != null)
+		{
+			row.getCell(columnIndex).setCellValue(columnValue.getName());
+		}
+	}
+
+	private List<HSSFCellStyle> prepareStyles(HSSFRow row, HSSFWorkbook wb)
+	{
+		List<HSSFCellStyle> styles = new ArrayList<HSSFCellStyle>();
+		for (int i = 0; i < row.getLastCellNum(); i++)
+		{
+			HSSFCellStyle newCellStyle = wb.createCellStyle();
+			newCellStyle.cloneStyleFrom(row.getCell(i).getCellStyle());
+			newCellStyle.setWrapText(false);
+			styles.add(newCellStyle);
+		}
+		return styles;
+	}
+
+	private void calculateClientRowHeight(Sheet sheet, Client member, Row row)
+	{
+		int height = 1;
+		if (member.getIndustry() != null)
+		{
+			int indHeight = calculateCellHeight(member.getIndustry(), INDUSTRY_COLUMN_WIDTH);
+			height = Math.max(height, indHeight);
+		}
+		if (!Strings.isNullOrEmpty(member.getBorrower()))
+		{
+			int borrowerHeight = calculateCellHeight(member.getBorrower(), BORROWER_COLUMN_WIDTH);
+			height = Math.max(height, borrowerHeight);
+		}
+		if (!Strings.isNullOrEmpty(member.getOwnerName()))
+		{
+			int borrowerHeight = calculateCellHeight(member.getOwnerName(), OWNERSHIP_COLUMN_WIDTH);
+			height = Math.max(height, borrowerHeight);
+		}
+		row.setHeightInPoints(NORMAL_ROW_HEIGHT * height);
+	}
+
+	private void calculateExposureRowHeight(HSSFSheet sheet, Exposure e, String currency, Row row)
+	{
+		int height = 1;
+		if (e.getCollaterals() != null)
+		{
+			int columnHeight = calculateCellHeight(getCollateralsAsString(e.getCollaterals(), currency), COLLATERALS_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+
+		if (e.getTaker() != null && e.getTaker().getName() != null)
+		{
+			int columnHeight = calculateCellHeight(e.getTaker().getName(), TAKER_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		if (!Strings.isNullOrEmpty(e.getTypeOfCredit()))
+		{
+			int columnHeight = calculateCellHeight(e.getTypeOfCredit(), TYPE_OF_CREDIT_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		if (!Strings.isNullOrEmpty(e.getTenor()))
+		{
+			int columnHeight = calculateCellHeight(e.getTenor(), TENOR_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		if (!Strings.isNullOrEmpty(e.getConditions()))
+		{
+			int columnHeight = calculateCellHeight(e.getConditions(), CONDITIONS_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		if (e.getPlasmanType() != null && !Strings.isNullOrEmpty(e.getPlasmanType().getName()))
+		{
+			int columnHeight = calculateCellHeight(e.getPlasmanType().getName(), TYPE_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		if (e.getRiskClass() != null && !Strings.isNullOrEmpty(e.getRiskClass().getName()))
+		{
+			int columnHeight = calculateCellHeight(e.getRiskClass().getName(), RISK_CLASS_COLUMN_WIDTH);
+			height = Math.max(height, columnHeight);
+		}
+		row.setHeightInPoints(NORMAL_ROW_HEIGHT * height);
+	}
+
+	private int calculateCellHeight(String cellValue, double cellWidth)
+	{
+
+		if (cellValue == null || cellValue.isEmpty())
+		{
+			return 1;
+		}
+
+
+		Font currFont = new Font("Arial", Font.PLAIN, 10);
+		FontRenderContext frc = new FontRenderContext(null, true, true);
+		AttributedString attrStr = new AttributedString(cellValue);
+		attrStr.addAttribute(TextAttribute.FONT, currFont);
+		LineBreakMeasurer measurer = new LineBreakMeasurer(attrStr.getIterator(), frc);
+		int nextPos = 0;
+		int lineCnt = 0;
+		while (measurer.getPosition() < cellValue.length())
+		{
+			nextPos = measurer.nextOffset((float) cellWidth); // mergedCellWidth is the max width of each line
+			lineCnt++;
+			measurer.setPosition(nextPos);
+		}
+		return lineCnt;
+	}
+
+	private HSSFWorkbook loadTemplate() throws IOException, InvalidFormatException
+	{
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		InputStream input = classLoader.getResourceAsStream("template.xls");
+		HSSFWorkbook wb = (HSSFWorkbook) WorkbookFactory.create(input);
+		return wb;
+	}
+
+	private Cell getCellByReference(Sheet sh, String reference)
+	{
+		CellReference ref = new CellReference(reference);
+		Row row = sh.getRow(ref.getRow());
+		Cell c = row.getCell(ref.getCol());
+		return c;
+	}
+
+	private String getCollateralsAsString(List<Collateral> collaterals, String currency)
+	{
+		if (collaterals != null && collaterals.size() > 0)
+		{
+			StringBuilder builder = new StringBuilder();
+			for (Collateral c : collaterals)
+			{
+				builder.append(c.getName());
+				//Vrijednosti
+				//				BigDecimal value = converterService.convert(c.getValueHrk(), c.getValueEur(), true, currency);
+				//				if (value != null) {
+				//					builder.append(" (" + value + ")");
+				//				}
+				builder.append(", ");
+			}
+			builder.delete(builder.length() - 2, builder.length());
+			return builder.toString();
+		}
+		else
+		{
+			return EMPTY_CELL_VALUE;
+		}
+	}
+
+}

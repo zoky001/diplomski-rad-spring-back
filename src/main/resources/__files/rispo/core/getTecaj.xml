@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns2:getTecajResponse xmlns:ns2="http://service.tecaj.zaba.hr/">
+         <return>
+            <ok>true</ok>
+            <tecajnaLista>
+               <brListe>001</brListe>
+               <brojPodbroj>193</brojPodbroj>
+               <datum>2018-10-06T00:00:00+02:00</datum>
+               <datumKreiranja>2018-10-06T00:00:00+02:00</datumKreiranja>
+               <disclaimer>Tečajna lista vrijedi do iznosa od 200.000 kn. Za iznose veće od 200.000 kn molimo obratite se svom bankaru ili najbližoj poslovnici. Zagrebačka banka d.d. ovlaštena je u svakom trenutku promijeniti ovu tečajnu listu i/ili obustaviti trgovanje bilo kojom valutom s ove tečajne liste.</disclaimer>
+               <dozvoljenoTrgovanje>true</dozvoljenoTrgovanje>
+               <hrvNaziv>EURO</hrvNaziv>
+               <kupDev>7.37000000</kupDev>
+               <kupEf>7.36000000</kupEf>
+               <numOznDevize>978</numOznDevize>
+               <oznBurze>001</oznBurze>
+               <oznDevize>EUR</oznDevize>
+               <paritetT>1</paritetT>
+               <prodDev>7.47000000</prodDev>
+               <prodEf>7.48000000</prodEf>
+               <sred>7.41939700</sred>
+            </tecajnaLista>
+         </return>
+      </ns2:getTecajResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

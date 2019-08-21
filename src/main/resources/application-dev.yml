@@ -1,0 +1,34 @@
+server:
+  port : 8082
+  mockServices: true
+
+
+mySettings:
+  mockServices:
+    port: 10101
+    enabled: true
+
+
+wsSettings:
+  rispo:
+    url:
+      rispoWS: http://localhost:${mySettings.mockServices.port}/Rispo_WSService
+      clientIdentification: http://localhost:${mySettings.mockServices.port}/ClientIdentificationWS
+      sova: http://localhost:${mySettings.mockServices.port}/SOVAserviceControllerService
+      povOsobe: http://localhost:${mySettings.mockServices.port}/PovOsServiceService
+      zok: http://localhost:${mySettings.mockServices.port}/KlijentServisService
+      tecajDevize: http://localhost:${mySettings.mockServices.port}/WSTecajDevizaService
+      irws: http://localhost:${mySettings.mockServices.port}/IRWSService
+  rispoService.url: http://localhost:10099/rispoMock
+  rispoService.environmentName: TK
+  rispoService.schemaName: TP
+  zokService.user: ema2-back-rispo-service
+  zokService.pass: Banka01!
+
+spring:
+  datasource:
+    url: jdbc:db2://vipa.zbo:448/DB2TEST3
+    username: DDFRRISP
+    password: D$WGDG33
+    driverClassName: com.ibm.db2.jcc.DB2Driver
+

@@ -1,0 +1,198 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:aktivneDepozitneInstitucijeResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <mbr>03234495</mbr>
+        <naziv>ZAGREBACKA BANKA DD</naziv>
+        <pb>000</pb>
+        <vbdi>2360000</vbdi>
+      </return>
+      <return>
+        <mbr>02500256</mbr>
+        <naziv>A ŠTEDNA BANKA MALOG PODUZETNIŠTVA</naziv>
+        <pb>000</pb>
+        <vbdi>6717002</vbdi>
+      </return>
+      <return>
+        <mbr>01263986</mbr>
+        <naziv>BANKA BROD D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>4124003</vbdi>
+      </return>
+      <return>
+        <mbr>01326287</mbr>
+        <naziv>BANKA KOVANICA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>4133006</vbdi>
+      </return>
+      <return>
+        <mbr>04604369</mbr>
+        <naziv>BKS BANK D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2488001</vbdi>
+      </return>
+      <return>
+        <mbr>04604369</mbr>
+        <naziv>BKS BANK D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2488001</vbdi>
+      </return>
+      <return>
+        <mbr>03467988</mbr>
+        <naziv>CROATIA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2485003</vbdi>
+      </return>
+      <return>
+        <mbr>03337367</mbr>
+        <naziv>ERSTE &amp; STEIERMAERKISCHE BANK D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2402006</vbdi>
+      </return>
+      <return>
+        <mbr>03929370</mbr>
+        <naziv>HRVATSKA BANKA ZA OBNOVU I RAZVITAK</naziv>
+        <pb>000</pb>
+        <vbdi>2493003</vbdi>
+      </return>
+      <return>
+        <mbr>03777928</mbr>
+        <naziv>HRVATSKA POSTANSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2390001</vbdi>
+      </return>
+      <return>
+        <mbr>01198947</mbr>
+        <naziv>HYPO ALPE-ADRIA-BANK D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2500009</vbdi>
+      </return>
+      <return>
+        <mbr>00971359</mbr>
+        <naziv>IMEX BANKA D.O.O.</naziv>
+        <pb>000</pb>
+        <vbdi>2492008</vbdi>
+      </return>
+      <return>
+        <mbr>03463958</mbr>
+        <naziv>ISTARSKA KREDITNA BANKA UMAG D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2380006</vbdi>
+      </return>
+      <return>
+        <mbr>03019349</mbr>
+        <naziv>JADRANSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2411006</vbdi>
+      </return>
+      <return>
+        <mbr>03123014</mbr>
+        <naziv>KARLOVACKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2400008</vbdi>
+      </return>
+      <return>
+        <mbr>00560286</mbr>
+        <naziv>KREDITNA BANKA ZAGREB D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2481000</vbdi>
+      </return>
+      <return>
+        <mbr>03108899</mbr>
+        <naziv>MEDIMURSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2392007</vbdi>
+      </return>
+      <return>
+        <mbr>01136356</mbr>
+        <naziv>NAVA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2495009</vbdi>
+      </return>
+      <return>
+        <mbr>03141721</mbr>
+        <naziv>OTP BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2407000</vbdi>
+      </return>
+      <return>
+        <mbr>03726177</mbr>
+        <naziv>PARTNER BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2408002</vbdi>
+      </return>
+      <return>
+        <mbr>03015904</mbr>
+        <naziv>PODRAVSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2386002</vbdi>
+      </return>
+      <return>
+        <mbr>01318942</mbr>
+        <naziv>PRIMORSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>4132003</vbdi>
+      </return>
+      <return>
+        <mbr>03269841</mbr>
+        <naziv>PRIVREDNA BANKA ZAGREB DD</naziv>
+        <pb>000</pb>
+        <vbdi>2340009</vbdi>
+      </return>
+      <return>
+        <mbr>00901717</mbr>
+        <naziv>RAIFFEISENBANK AUSTRIA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2484008</vbdi>
+      </return>
+      <return>
+        <mbr>03113680</mbr>
+        <naziv>SAMOBORSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2403009</vbdi>
+      </return>
+      <return>
+        <mbr>03999092</mbr>
+        <naziv>SLATINSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2412009</vbdi>
+      </return>
+      <return>
+        <mbr>00131920</mbr>
+        <naziv>SPLITSKO DALMATINSKA BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>4109006</vbdi>
+      </return>
+      <return>
+        <mbr>00813737</mbr>
+        <naziv>STEDBANKA D.O.O.</naziv>
+        <pb>000</pb>
+        <vbdi>2483005</vbdi>
+      </return>
+      <return>
+        <mbr>00675539</mbr>
+        <naziv>VABA D.D. BANKA VARAžDIN</naziv>
+        <pb>000</pb>
+        <vbdi>2489004</vbdi>
+      </return>
+      <return>
+        <mbr>03917185</mbr>
+        <naziv>VENETO BANKA D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2381009</vbdi>
+      </return>
+      <return>
+        <mbr>01260405</mbr>
+        <naziv>VOLKSBANK D.D.</naziv>
+        <pb>000</pb>
+        <vbdi>2503007</vbdi>
+      </return>
+      <return>
+        <mbr>03269817</mbr>
+        <naziv>HRVATSKA NARODNA BANKA</naziv>
+        <pb>000</pb>
+        <vbdi>1001005</vbdi>
+      </return>
+    </ns2:aktivneDepozitneInstitucijeResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

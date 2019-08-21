@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:provjeraBankeResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <adresaBanke></adresaBanke>
+        <bicCodeVbdi>HELADEF1FDS</bicCodeVbdi>
+        <kodGreske>0000</kodGreske>
+        <nazivBanke>SPARKASSE FULDA</nazivBanke>
+        <sifraZemlje>276</sifraZemlje>
+        <sjedisteBanke>FULDA</sjedisteBanke>
+      </return>
+    </ns2:provjeraBankeResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

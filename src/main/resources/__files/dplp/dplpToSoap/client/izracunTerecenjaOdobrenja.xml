@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:izracunTerecenjaOdobrenjaResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <bicCodeVbdi/>
+        <devizaOdobrenja>978</devizaOdobrenja>
+        <devizaTerecenja>978</devizaTerecenja>
+        <ibanRacun/>
+        <iznosOdobrenja>555.00</iznosOdobrenja>
+        <iznosPreostali>0.00</iznosPreostali>
+        <iznosTerecenja>555.00</iznosTerecenja>
+        <izracunInfoGreske>0000</izracunInfoGreske>
+        <oznakaTecaja>S</oznakaTecaja>
+        <vrstaIznosa/>
+      </return>
+    </ns2:izracunTerecenjaOdobrenjaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

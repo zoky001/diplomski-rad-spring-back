@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:provjeraZakljucniceResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <brojZakljucnice>18-00003</brojZakljucnice>
+        <datumValute>19.03.2019</datumValute>
+        <devizaOdobrenja>978</devizaOdobrenja>
+        <devizaTerecenja>191</devizaTerecenja>
+        <iznosOdobrenja>30.000,00</iznosOdobrenja>
+        <iznosTerecenja>223.230,00</iznosTerecenja>
+        <maticniBroj>03222039</maticniBroj>
+        <podbroj>000</podbroj>
+        <tecaj>7,44100000</tecaj>
+      </return>
+    </ns2:provjeraZakljucniceResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns2:wSKorisnikPOSifraResponse xmlns:ns2="http://controller.web.SOVAServices.zaba.hr/">
+         <return>
+            <funkcija>RISPO01</funkcija>
+            <idpo>4</idpo>
+            <putanja>.01999900.01001000.01079900.01072400.01072401.</putanja>
+            <sifraPO>01072401</sifraPO>
+            <tipPO>1</tipPO>
+         </return>
+      </ns2:wSKorisnikPOSifraResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

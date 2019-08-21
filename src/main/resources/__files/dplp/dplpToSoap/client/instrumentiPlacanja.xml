@@ -1,0 +1,90 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:instrumentiPlacanjaResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <naziv>doznaka</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>10</sifra>
+      </return>
+      <return>
+        <naziv>čekovi</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>11</sifra>
+      </return>
+      <return>
+        <naziv>inkaso</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>12</sifra>
+      </return>
+      <return>
+        <naziv>strana gotovina</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>13</sifra>
+      </return>
+      <return>
+        <naziv>gotovina u kunama</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>14</sifra>
+      </return>
+      <return>
+        <naziv>povrat doznake</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>20</sifra>
+      </return>
+      <return>
+        <naziv>povrat čekova</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>21</sifra>
+      </return>
+      <return>
+        <naziv>povrat inkasa</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>22</sifra>
+      </return>
+      <return>
+        <naziv>povrat strane gotovine</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>23</sifra>
+      </return>
+      <return>
+        <naziv>povrat gotovine u kunama</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>24</sifra>
+      </return>
+      <return>
+        <naziv>akreditiv (pokriće)</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>70</sifra>
+      </return>
+      <return>
+        <naziv>povrat pokrića po akreditivu</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>71</sifra>
+      </return>
+      <return>
+        <naziv>akreditiv (korištenje)</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>72</sifra>
+      </return>
+      <return>
+        <naziv>povrat korištenja akreditiva</naziv>
+        <radnikPromjene/>
+        <radnikUnosa/>
+        <sifra>73</sifra>
+      </return>
+    </ns2:instrumentiPlacanjaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

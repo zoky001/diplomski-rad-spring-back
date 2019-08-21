@@ -1,0 +1,48 @@
+server.port: 9082
+management.context-path: /service-diagnostics
+bpdId: 25.611c25ef-0a9e-483f-8fd4-3fa6f80f37a2
+processAppId: 2066.b05178d4-d72f-4eac-a7d7-40b42c7cc15b
+
+#SPRING
+spring:
+  datasource:
+    url: jdbc:db2://vipa.zbo:447/DB2TEST2
+    username: DDFRISPO
+    password: JHTRS#T1
+    driverClassName: com.ibm.db2.jcc.DB2Driver
+
+mySettings:
+  mockServices:
+    port: 10101
+    enabled: false
+
+  swagger:
+    enabled: true
+    securedGUIAccess: false
+    username: ema
+    password: ema
+
+service:
+  connectTimeout: 15000
+  readTimeout: 150000
+  name: RISPO
+  instanceId: ZG-${service.name}-LOCAL-1
+  timezoneId: Europe/Zagreb
+
+wsSettings:
+  rispo:
+    url:
+      rispoWS: http://wastest4.zbo:19301/RISPO_WS/Rispo_WSService
+      clientIdentification: http://wastest4.zbo:19300/ClientIdentificationWS
+      sova: http://wastest4.zbo:19101/SOVAServices/SOVAserviceControllerService
+      povOsobe: http://wastest4.zbo:19201/PovezaneOsobeWS/PovOsServiceService
+      zok: http://wastest4.zbo:19300/ZokWs/KlijentServisService
+      tecajDevize: http://wastest4.zbo:19300/WSTecaj/WSTecajDevizaService
+      irws: http://wastest4.zbo:19300/IRWS/IRWSService
+  rispoService.url: http://razvojas1:9082/rispo
+  rispoService.environmentName: TP
+  rispoService.schemaName: P
+  zokService.user: ema2-back-rispo-service
+  zokService.pass: Banka01!
+
+#AutogenSection~! (Below this comment go auto generated property values so don't remove this line or add anything below)

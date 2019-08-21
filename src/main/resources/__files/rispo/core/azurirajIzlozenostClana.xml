@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <dlwmin:azurirajIzlozenostClanaResponse xmlns:dlwmin="http://main/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <return>
+            <error>true</error>
+            <errorMsg>Nemate prava za ažuriranje odabranog klijenta</errorMsg>
+         </return>
+      </dlwmin:azurirajIzlozenostClanaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

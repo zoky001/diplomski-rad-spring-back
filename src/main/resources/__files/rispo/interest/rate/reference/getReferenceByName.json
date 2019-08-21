@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "data": {
+    "name": "A10",
+    "description": "Auto krediti Premium CO - CHF ",
+    "class": "hr.zaba.ewm.rispo.model.exposure.InterestRateReference"
+  }
+}

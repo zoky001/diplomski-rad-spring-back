@@ -1,0 +1,59 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:partijeTerecenjaResponse xmlns:ns2="http://partijeterecenja.ejb.placanjaiprijenosi.dplp.zaba.hr/">
+      <return>
+        <aplik>dplp</aplik>
+        <brRadnika>A011828</brRadnika>
+        <hostAction>1</hostAction>
+        <ibanNalogodavatelja></ibanNalogodavatelja>
+        <ibanRacun></ibanRacun>
+        <infoGreske>0000</infoGreske>
+        <instPlac></instPlac>
+        <izScanDN>D</izScanDN>
+        <izUnosNapomene>N</izUnosNapomene>
+        <izZakljucaj></izZakljucaj>
+        <kontrolniBrojIbanaPlatitelja>90</kontrolniBrojIbanaPlatitelja>
+        <kontrolniBrojIbanaPrimatelja></kontrolniBrojIbanaPrimatelja>
+        <korisnikAdresa></korisnikAdresa>
+        <korisnikMb></korisnikMb>
+        <korisnikNaziv></korisnikNaziv>
+        <korisnikPodBroj></korisnikPodBroj>
+        <korisnikSjediste></korisnikSjediste>
+        <model></model>
+        <modelZaduzenja></modelZaduzenja>
+        <nalogAdresa>PRILAZ GJURE DEŽELIĆA 19,ZAGRE</nalogAdresa>
+        <nalogMb>79527360</nalogMb>
+        <nalogNaziv>RPL 018 INDONESIAN EMBASSY ZAGREB</nalogNaziv>
+        <nalogOib>11495028061</nalogOib>
+        <nalogPodbr>999</nalogPodbr>
+        <nalogSjed></nalogSjed>
+        <nalogTelef></nalogTelef>
+        <partijaOdobrenja></partijaOdobrenja>
+        <partijaTerecenjaEdit>1501061625</partijaTerecenjaEdit>
+        <pbo></pbo>
+        <pboZaduzenja></pboZaduzenja>
+        <prijelaznaPartijaOdobrenja></prijelaznaPartijaOdobrenja>
+        <prijelaznaPartijaOdobrenjaVriz></prijelaznaPartijaOdobrenjaVriz>
+        <sifTran>K003</sifTran>
+        <sifraOsnovePlacanja></sifraOsnovePlacanja>
+        <sifraValuteOdobrenja></sifraValuteOdobrenja>
+        <sifraValuteTerecenja></sifraValuteTerecenja>
+        <sifraZemljeTerecenja>360</sifraZemljeTerecenja>
+        <ulModelPboHr></ulModelPboHr>
+        <ulModelPbzHr></ulModelPbzHr>
+        <valKlauzula>N</valKlauzula>
+        <vbdi></vbdi>
+        <vbdiPlatitelja>2360000</vbdiPlatitelja>
+        <vbdiPrimatelja></vbdiPrimatelja>
+        <vpoEdit>18F</vpoEdit>
+        <vrizEdit></vrizEdit>
+        <vrstaIznosa></vrstaIznosa>
+        <vrstaNaloga>N11</vrstaNaloga>
+        <vrstaPravneOsobe>N</vrstaPravneOsobe>
+        <zemljaPlatitelja>HR</zemljaPlatitelja>
+        <zemljaPrimatelja></zemljaPrimatelja>
+      </return>
+    </ns2:partijeTerecenjaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
+

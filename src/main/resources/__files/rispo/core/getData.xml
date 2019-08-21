@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <dlwmin:getDataResponse xmlns:dlwmin="http://main/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <return>
+            <error>false</error>
+            <id>5896</id>
+         </return>
+      </dlwmin:getDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

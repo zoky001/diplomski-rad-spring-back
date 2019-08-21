@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:dohvatiBICResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <bic>HELADEF1FDS</bic>
+        <sqlCode>0</sqlCode>
+        <sqlErrm>OK</sqlErrm>
+        <sqlState>00000</sqlState>
+      </return>
+    </ns2:dohvatiBICResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

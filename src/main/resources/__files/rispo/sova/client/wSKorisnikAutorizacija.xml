@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:wSKorisnikAutorizacijaResponse xmlns:ns2="http://controller.web.SOVAServices.zaba.hr/">
+      <return>
+        <aplikacija>RISPO</aplikacija>
+        <funkcija>RISPO01</funkcija>
+      </return>
+      <return>
+        <aplikacija>RISPO</aplikacija>
+        <funkcija>RISPO02</funkcija>
+      </return>
+      <return>
+        <aplikacija>RISPO</aplikacija>
+        <funkcija>RISPO03</funkcija>
+      </return>
+    </ns2:wSKorisnikAutorizacijaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

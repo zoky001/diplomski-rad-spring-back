@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns2:getVazeciRejtingResponse xmlns:ns2="http://service.irws.zaba.hr/">
+         <return>
+            <ok>true</ok>
+            <rejtingPodaci>
+               <baRejting>8</baRejting>
+               <datumUpitnika>2015-01-01</datumUpitnika>
+               <datumVazenja>2017-05-31</datumVazenja>
+               <datumZakljucenjaFI>2015-12-31</datumZakljucenjaFI>
+               <defaultniRejting>false</defaultniRejting>
+               <fiNazivSheme>Obrtnici u sustavu jednostavnog knjigovodstva</fiNazivSheme>
+               <godinaFI>2015</godinaFI>
+               <idFI>16337</idFI>
+               <idModela>6</idModela>
+               <idRejtinga>76952</idRejtinga>
+               <pd>0.3332380000</pd>
+               <rejting>7</rejting>
+               <rejtingModel>SARA</rejtingModel>
+               <statusRejtinga>Konačni rejting</statusRejtinga>
+               <vazeci>true</vazeci>
+            </rejtingPodaci>
+         </return>
+      </ns2:getVazeciRejtingResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

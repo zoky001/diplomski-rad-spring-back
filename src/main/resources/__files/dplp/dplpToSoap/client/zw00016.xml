@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:pozoviZW00016Response xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <wpodwpodaci>191HR1923600001101290110 119100000 IBAN JE ISPRAVAN</wpodwpodaci>
+        <wpodwpodaci005F0INDIKATOR>0</wpodwpodaci005F0INDIKATOR>
+        <wpodwpodaci005F0WCOD>0</wpodwpodaci005F0WCOD>
+        <wpodwpodaci005F0WPORUKICA>IBAN JE ISPRAVAN</wpodwpodaci005F0WPORUKICA>
+        <wpodwpodaci005F0WTAB></wpodwpodaci005F0WTAB>
+      </return>
+    </ns2:pozoviZW00016Response>
+  </soapenv:Body>
+</soapenv:Envelope>

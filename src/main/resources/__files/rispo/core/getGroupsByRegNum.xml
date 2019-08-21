@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Body>
+      <ns2:getGroupsByRegNumResponse xmlns:ns2="http://service.ze.zaba.hr/">
+         <groups>
+            <kpo>35124KPO</kpo>
+            <naziv>GRAD ZAGREB GRUPA</naziv>
+         </groups>
+      </ns2:getGroupsByRegNumResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

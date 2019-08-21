@@ -1,0 +1,108 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:kreirajNalog11InterniResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return xsi:type="ns2:nalog11InterniDTO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <obavijesti>
+          <opis>NEMA POKRIĆA, NALOG UNESEN U RED ČEKANJA YD030000. BR.NALOGA: 1956000759. ŽELITE LI ISPIS NALOGA?</opis>
+        </obavijesti>
+        <adresaKorisnika>NAZOROVA 64</adresaKorisnika>
+        <adresaNd>PRILAZ GJURE DEŽELIĆA 19,ZAGRE</adresaNd>
+        <applicationName>dplp</applicationName>
+        <brRadnika>A011828</brRadnika>
+        <brojNaloga>1956000759</brojNaloga>
+        <cicsVrstaPosla/>
+        <datUnosa>22.03.2019</datUnosa>
+        <datumNajave>22.03.2019</datumNajave>
+        <ispisatiNalog>true</ispisatiNalog>
+        <iznosOdobrenja>1,00</iznosOdobrenja>
+        <iznosOdobrenjaColumn>1,00</iznosOdobrenjaColumn>
+        <iznosTerecenjaColumn>1,00</iznosTerecenjaColumn>
+        <kodGreske/>
+        <kontrolniBrojIbanaPlatitelja>90</kontrolniBrojIbanaPlatitelja>
+        <kontrolniBrojIbanaPlatiteljaColumn>90</kontrolniBrojIbanaPlatiteljaColumn>
+        <kontrolniBrojIbanaPrimatelja>19</kontrolniBrojIbanaPrimatelja>
+        <matBrBanke/>
+        <mb>79527360</mb>
+        <nazivInstrumentaPlacanja/>
+        <nazivKorisnika>ZELINA D.D.</nazivKorisnika>
+        <nazivNd>RPL 018 INDONESIAN EMBASSY ZAGREB</nazivNd>
+        <odabirVrsteReferenceSepaPlatitelja/>
+        <oib>11495028061</oib>
+        <otColumn>O</otColumn>
+        <oznakaAkreditivInkaso/>
+        <partijaOdobrenja>1101290110</partijaOdobrenja>
+        <partijaPlatitelja/>
+        <partijaPrimatelja/>
+        <partijaTerecenjaColumn>1501061625</partijaTerecenjaColumn>
+        <platiteljModel/>
+        <platiteljOznakaZemlje/>
+        <platiteljPozivNabroj/>
+        <platiteljReferenca/>
+        <platiteljReferencaPrefiks/>
+        <platiteljVlastitaOznaka/>
+        <podBroj>999</podBroj>
+        <pp_kk_id_othr_id/>
+        <pp_kk_naz/>
+        <pp_kk_ozn/>
+        <pp_razl_izuz/>
+        <pp_sd_id_othr_id/>
+        <pp_sd_naz/>
+        <pp_sd_ozn/>
+        <pp_sif_izuz/>
+        <pravniStatus/>
+        <preostaliIznosOdobrenja>0,00</preostaliIznosOdobrenja>
+        <primateljId/>
+        <primateljReferenca/>
+        <referent/>
+        <sepaNalog>1</sepaNalog>
+        <sifraInstrumentaPlacanja/>
+        <sifraOsnovePlacanja/>
+        <sifraTransakcije/>
+        <sifraTroskaInoBanke/>
+        <sifraValuteColumn>978</sifraValuteColumn>
+        <sifraValuteOdobrenja>978</sifraValuteOdobrenja>
+        <sjedisteKorisnika>10380 SVETI IVAN ZELINA</sjedisteKorisnika>
+        <sjedisteNd/>
+        <status/>
+        <svrhaPlacanja/>
+        <swiftTelex>1</swiftTelex>
+        <telefonNd/>
+        <UL_MODEL_PBO_HR/>
+        <UL_MODEL_PBZ_HR/>
+        <un/>
+        <vbdiPlatitelja>2360000</vbdiPlatitelja>
+        <vbdiPlatiteljaColumn>2360000</vbdiPlatiteljaColumn>
+        <vbdiPrimatelja>2360000</vbdiPrimatelja>
+        <vpoColumn>18F</vpoColumn>
+        <vrizColumn>070</vrizColumn>
+        <vrstaIznosa>070</vrstaIznosa>
+        <vrstaNaloga>N11</vrstaNaloga>
+        <vrstaPravneOsobe/>
+        <zemljaPlatitelja>HR</zemljaPlatitelja>
+        <zemljaPlatiteljaColumn>HR</zemljaPlatiteljaColumn>
+        <zemljaPrimatelja>HR</zemljaPrimatelja>
+        <brojNalogaLocek/>
+        <brojZakljucniceColumn/>
+        <ibanNalogodavatelja/>
+        <ibanRacun/>
+        <infoGreske/>
+        <mbKorisnika>03584666</mbKorisnika>
+        <model>99</model>
+        <modelZaduzenja>99</modelZaduzenja>
+        <nazivBanke>ZAGREBACKA BANKA DD</nazivBanke>
+        <nazivValuteOdobrenja/>
+        <nks>0</nks>
+        <oznakaTecajaColumn>S</oznakaTecajaColumn>
+        <pbo/>
+        <pboZaduzenja/>
+        <podBrojKorisnika>000</podBrojKorisnika>
+        <prijelaznaPartijaOdobrenja/>
+        <prijelaznaPartijaOdobrenjaVriz/>
+        <sifZemljeOdobrenja/>
+        <sifZemljeTerecenja/>
+        <vbdi>2360000</vbdi>
+        <vriz/>
+      </return>
+    </ns2:kreirajNalog11InterniResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

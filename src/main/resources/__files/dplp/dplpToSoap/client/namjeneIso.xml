@@ -1,0 +1,510 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:namjeneISOResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <nazivHr>Anuitet</nazivHr>
+        <sifraNamjene>ANNI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje putem interneta</nazivHr>
+        <sifraNamjene>WEBI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje putem telefona</nazivHr>
+        <sifraNamjene>TELI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Željeznički prijevoz</nazivHr>
+        <sifraNamjene>RLWY</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Životno osiguranje</nazivHr>
+        <sifraNamjene>LIFI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Štednja</nazivHr>
+        <sifraNamjene>SAVG</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Austrijski državni službenici, Kategorija A</nazivHr>
+        <sifraNamjene>GVEA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Austrijski državni službenici, Kategorija B</nazivHr>
+        <sifraNamjene>GVEB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Austrijski državni službenici, Kategorija C</nazivHr>
+        <sifraNamjene>GVEC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Austrijski državni službenici, Kategorija D</nazivHr>
+        <sifraNamjene>GVED</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Autobusni prijevoz</nazivHr>
+        <sifraNamjene>BUSB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Autorsko pravo</nazivHr>
+        <sifraNamjene>CPYR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Bolnička njega</nazivHr>
+        <sifraNamjene>HSPC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Depozit</nazivHr>
+        <sifraNamjene>DEPT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Derivativi (izvedenice)</nazivHr>
+        <sifraNamjene>DERI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Dividenda</nazivHr>
+        <sifraNamjene>DIVD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Dječji doplatak</nazivHr>
+        <sifraNamjene>BECH</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Državno osiguranje</nazivHr>
+        <sifraNamjene>GOVI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Energija</nazivHr>
+        <sifraNamjene>ENRG</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Gotovinska isplata</nazivHr>
+        <sifraNamjene>CSDB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Gotovinska isplata</nazivHr>
+        <sifraNamjene>CDCD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Hedging</nazivHr>
+        <sifraNamjene>HEDG</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Inozemni čekovi</nazivHr>
+        <sifraNamjene>CHQB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Isplata socijalnih zajmova društava  banci</nazivHr>
+        <sifraNamjene>CSLP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kamata</nazivHr>
+        <sifraNamjene>INTE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kapitalna štednja</nazivHr>
+        <sifraNamjene>CBFF</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kartično plaćanje uz gotovinski povrat (Cashback)</nazivHr>
+        <sifraNamjene>CDCB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Knjiženje  prodajnog mjesta</nazivHr>
+        <sifraNamjene>POPE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Knjiženje konverzije u Back Office-u</nazivHr>
+        <sifraNamjene>BOCE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Knjiženje potraživanja</nazivHr>
+        <sifraNamjene>AREN</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Komercijalno plaćanje</nazivHr>
+        <sifraNamjene>COMC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Konsol. Plaćanje 3. strane za račun potrošača</nazivHr>
+        <sifraNamjene>COMT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kućna njega bolesnika</nazivHr>
+        <sifraNamjene>HLTC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kupoprodaja deviza</nazivHr>
+        <sifraNamjene>FREX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kupoprodaja roba</nazivHr>
+        <sifraNamjene>GDDS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kupoprodaja roba i usluga</nazivHr>
+        <sifraNamjene>GDSV</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kupoprodaja roba i usluga uz gotovinski povrat</nazivHr>
+        <sifraNamjene>GSCB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Kupoprodaja usluga</nazivHr>
+        <sifraNamjene>SCVE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Medicinska oprema</nazivHr>
+        <sifraNamjene>DMEQ</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Mirovine</nazivHr>
+        <sifraNamjene>PENS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Mrežna komunikacija</nazivHr>
+        <sifraNamjene>NWCM</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Najam</nazivHr>
+        <sifraNamjene>RENT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Naknada za licencu</nazivHr>
+        <sifraNamjene>LICF</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Naknada za nezaposlenost/invaliditet</nazivHr>
+        <sifraNamjene>BENE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Naknada za opoziv/storno</nazivHr>
+        <sifraNamjene>CFEE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Naplata</nazivHr>
+        <sifraNamjene>COLL</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Nenavedeno</nazivHr>
+        <sifraNamjene>NOWS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Neopozivo plaćanje  debitnom karticom</nazivHr>
+        <sifraNamjene>IDCP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Neopozivo plaćanje  kreditnom karticom</nazivHr>
+        <sifraNamjene>ICCP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Novčana nagrada (bonus)</nazivHr>
+        <sifraNamjene>BONU</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Obročno plaćanje</nazivHr>
+        <sifraNamjene>RINP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Oftalmološke/okulističke usluge</nazivHr>
+        <sifraNamjene>VIEW</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Originalno odobrenje</nazivHr>
+        <sifraNamjene>CDOC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Osiguranje imovine</nazivHr>
+        <sifraNamjene>PPTI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Osiguranje od ozljede na radu</nazivHr>
+        <sifraNamjene>LBRI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Ostalo</nazivHr>
+        <sifraNamjene>OTHR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Otplata glavnice kredita za automobil</nazivHr>
+        <sifraNamjene>CLPR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Otplata stambenog kredita</nazivHr>
+        <sifraNamjene>HLRP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Otplata zajma</nazivHr>
+        <sifraNamjene>LOAR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje alimentacije</nazivHr>
+        <sifraNamjene>ALMY</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje dobavljaču</nazivHr>
+        <sifraNamjene>SUPP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje državi/države</nazivHr>
+        <sifraNamjene>GOVT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje kreditnom karticom</nazivHr>
+        <sifraNamjene>CCRD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje poreza</nazivHr>
+        <sifraNamjene>TAXS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje poreza na dodanu vrijednost</nazivHr>
+        <sifraNamjene>VATX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje potvrde</nazivHr>
+        <sifraNamjene>RCPT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje putem terećenja</nazivHr>
+        <sifraNamjene>DBTC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje rate pri kupnji na otplatu</nazivHr>
+        <sifraNamjene>IHRP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje roba</nazivHr>
+        <sifraNamjene>CMDT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje troškova</nazivHr>
+        <sifraNamjene>PRCP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje troškova  učinjenih kreditnom karticom</nazivHr>
+        <sifraNamjene>CDBL</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje troškova učinjenih debitnom karticom</nazivHr>
+        <sifraNamjene>DCRD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje u dobrotvorne svrhe</nazivHr>
+        <sifraNamjene>CHAR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaćanje unutar Grupe</nazivHr>
+        <sifraNamjene>INTC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plaće</nazivHr>
+        <sifraNamjene>SALA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Platni spisak</nazivHr>
+        <sifraNamjene>PAYR</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Plemeniti metali</nazivHr>
+        <sifraNamjene>PRME</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Početna naknada (Opening Fee)</nazivHr>
+        <sifraNamjene>OFEE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Poljoprivredni transfer</nazivHr>
+        <sifraNamjene>AGRT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Ponovna prezentacija čeka</nazivHr>
+        <sifraNamjene>RCKE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Porez na dohodak</nazivHr>
+        <sifraNamjene>INTX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Porez na nasljedstvo</nazivHr>
+        <sifraNamjene>ESTX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Porez na neto dohodak</nazivHr>
+        <sifraNamjene>NITX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Porez na stambeni prostor</nazivHr>
+        <sifraNamjene>HSTX</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Porez po odbitku</nazivHr>
+        <sifraNamjene>WHLD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Poslovni troškovi</nazivHr>
+        <sifraNamjene>BEXP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Povrat</nazivHr>
+        <sifraNamjene>REFU</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Predujam</nazivHr>
+        <sifraNamjene>ADVA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Premija osiguranja</nazivHr>
+        <sifraNamjene>INSU</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Premija osiguranja za vozilo</nazivHr>
+        <sifraNamjene>INPC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Pretplata</nazivHr>
+        <sifraNamjene>SUBS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Provizija</nazivHr>
+        <sifraNamjene>COMM</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za električnu energiju</nazivHr>
+        <sifraNamjene>ELEC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za kabelsku TV</nazivHr>
+        <sifraNamjene>CBTV</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za ostale telekomunikacijske usluge</nazivHr>
+        <sifraNamjene>OTLC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za plin</nazivHr>
+        <sifraNamjene>GASB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za telefon</nazivHr>
+        <sifraNamjene>PHON</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Račun za vodu</nazivHr>
+        <sifraNamjene>WTER</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Rata</nazivHr>
+        <sifraNamjene>INSM</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Riznični transferi</nazivHr>
+        <sifraNamjene>TREA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Saldiranje (netiranje)</nazivHr>
+        <sifraNamjene>NETT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Socijalna pomoć</nazivHr>
+        <sifraNamjene>SSBE</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Studiranje</nazivHr>
+        <sifraNamjene>STDY</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Tantijemi / Prihodi od autorskog prava</nazivHr>
+        <sifraNamjene>ROYA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Trajektni prijevoz</nazivHr>
+        <sifraNamjene>FERB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Trgovačke usluge</nazivHr>
+        <sifraNamjene>TRAD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Troškovi</nazivHr>
+        <sifraNamjene>COST</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Troškovi za mrežu</nazivHr>
+        <sifraNamjene>NWCH</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Unaprijed odobreno terećenje</nazivHr>
+        <sifraNamjene>PADD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Upravljanje likvidnošću</nazivHr>
+        <sifraNamjene>LIMA</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Upravljanje sredstvima izvan banke</nazivHr>
+        <sifraNamjene>CASH</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Upravljanje sredstvima unutar banke</nazivHr>
+        <sifraNamjene>ACCT</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Usluge anestezije</nazivHr>
+        <sifraNamjene>ANTS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Usluge skrbi za rekonvalescente</nazivHr>
+        <sifraNamjene>CVCF</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Ustanova dugoročne zdravstvene skrbi</nazivHr>
+        <sifraNamjene>LTCF</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Ustanova socijalne skrbi</nazivHr>
+        <sifraNamjene>ICRF</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Uvjeti plaćanja</nazivHr>
+        <sifraNamjene>PTSP</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Višenamjenske  usluge</nazivHr>
+        <sifraNamjene>MSVC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Vrijednosni papiri</nazivHr>
+        <sifraNamjene>SECU</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zajam</nazivHr>
+        <sifraNamjene>LOAN</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zaklada</nazivHr>
+        <sifraNamjene>TRFD</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zamjenska gotovina</nazivHr>
+        <sifraNamjene>CDQC</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zdravstvene usluge</nazivHr>
+        <sifraNamjene>MDCS</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zdravstveno osiguranje</nazivHr>
+        <sifraNamjene>HLTI</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zračni prijevoz</nazivHr>
+        <sifraNamjene>AIRB</sifraNamjene>
+      </return>
+      <return>
+        <nazivHr>Zubarske usluge</nazivHr>
+        <sifraNamjene>DNTS</sifraNamjene>
+      </return>
+    </ns2:namjeneISOResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

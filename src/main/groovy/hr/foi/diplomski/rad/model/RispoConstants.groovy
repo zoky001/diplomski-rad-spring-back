@@ -1,0 +1,88 @@
+package hr.foi.diplomski.rad.model
+
+class RispoConstants {
+	String KPO = "KPO"
+
+	String GROUP_FETCH = "rispo.group.fetch"
+	String GROUP_FETCH_TIMEOUT = "rispo.group.fetch.timeout"
+	String GROUP_FETCH_ERROR = "rispo.group.fetch.error"
+	String GROUP_ALL_FETCH_ERROR = "rispo.group.all.fetch.error"
+
+	String GROUP_LOCK = "rispo.group.lock"
+	String GROUP_LOCK_SUCCESS= "rispo.group.lock.success"
+	String GROUP_LOCK_ERROR = "rispo.group.lock.error"
+
+	String CLIENT_UPDATE = "rispo.client.update"
+	String CLIENT_UPDATE_SUCCESS = "rispo.client.update.success"
+	String CLIENT_ADD = "rispo.client.add"
+	String CLIENT_ADD_SUCCESS = "rispo.client.add.success"
+	String CLIENT_REMOVE = "rispo.client.remove"
+	String CLIENT_REMOVE_SUCCESS = "rispo.client.remove.success"
+	String CLIENT_REMOVE_ERROR = "rispo.client.remove.error"
+	String CLIENT_FETCH = "rispo.client.fetch"
+	String CLIENT_FETCH_TIMEOUT = "rispo.client.fetch.timeout"
+	String CLIENT_FETCH_ERROR = "rispo.client.fetch.error"
+
+	String CLIENT_GROUP = "rispo.client.group"
+	String CLIENT_GROUP_SUCCESS = "rispo.client.group.success"
+	String CLIENT_GROUP_ERROR = "rispo.client.group.error"
+	String CLIENT_UNGROUP_SUCCESS = "rispo.client.ungroup.success"
+	String CLIENT_UNGROUP_ERROR = "rispo.client.ungroup.error"
+	String CLIENT_PRIMARY_SUCCESS = "rispo.client.primary.success"
+	String CLIENT_PRIMARY_ERROR = "rispo.client.primary.error"
+	String CLIENT_SAVE = "rispo.client.save"
+	String CLIENT_SAVE_SUCCESS = "rispo.client.save.success"
+	String CLIENT_SAVE_ERROR = "rispo.client.save.error"
+
+	String EXPORT_EXCEL = "rispo.export.excel"
+	String EXPORT_EXCEL_ERROR = "rispo.export.excel.error"
+	String EXPORT_EXCEL_GROUP = "rispo.export.excel.group"
+	String EXPORT_EXCEL_EMPTY = "rispo.export.excel.empty"
+	String EXPORT_EXCEL_LIMIT = "rispo.export.excel.limit"
+
+	String EXPOSURE_UPDATE = "rispo.exposure.update"
+	String EXPOSURE_UPDATE_SUCCESS = "rispo.exposure.update.success"
+	String EXPOSURE_ADD = "rispo.exposure.add"
+	String EXPOSURE_ADD_SUCCESS = "rispo.exposure.add.success"
+	String EXPOSURE_REMOVE = "rispo.exposure.remove"
+	String EXPOSURE_REMOVE_SUCCESS = "rispo.exposure.remove.success"
+	String EXPOSURE_REMOVE_ERROR = "rispo.exposure.remove.error"
+	String EXPOSURE_GROUP = "rispo.exposure.group"
+	String EXPOSURE_GROUP_SUCCESS = "rispo.exposure.group.success"
+	String EXPOSURE_GROUP_ERROR = "rispo.exposure.group.error"
+	String EXPOSURE_UNGROUP_SUCCESS = "rispo.exposure.ungroup.success"
+	String EXPOSURE_UNGROUP_ERROR = "rispo.exposure.ungroup.error"
+	String EXPOSURE_SAVE= "rispo.exposure.save"
+	String EXPOSURE_SAVE_ERROR = "rispo.exposure.save.error"
+
+	String KRITERIJ = "Kriteriji pretrage: "
+	String BROJ_REZULTATA = "Broj rezultata: "
+
+	String CODEBOOK_UPDATE = "rispo.codebooks.update"
+	String CODEBOOK_UPDATE_SUCCESS = "rispo.codebooks.update.success"
+	String CODEBOOK_UPDATE_ERROR = "rispo.codebooks.update.error"
+	String CODEBOOK_ADD = "rispo.codebooks.add"
+	String CODEBOOK_ADD_SUCCESS = "rispo.codebooks.add.success"
+	String CODEBOOK_ADD_ERROR = "rispo.codebooks.add.error"
+	String CODEBOOK_REMOVE = "rispo.codebooks.delete"
+	String CODEBOOK_REMOVE_SUCCESS = "rispo.codebooks.delete.success"
+	String CODEBOOK_REMOVE_ERROR = "rispo.codebooks.delete.error"
+
+	String REPORTS_FETCH = "rispo.reports.fetch"
+	String REPORTS_FETCH_CREATING = "rispo.reports.creating"
+	String REPORTS_FETCH_CREATED = "rispo.reports.created"
+	String REPORTS_FETCH_ERROR = "rispo.reports.fetch.error"
+	String REPORTS_DELETE = "rispo.reports.delete"
+	String REPORTS_DELETE_SUCCESS= "rispo.reports.delete.success"
+	String REPORTS_DELETE_ERROR = "rispo.reports.delete.error"
+	String REPORTS_DENIED = "rispo.reports.denied"
+
+	String TECAJ_FETCH = "rispo.client.tecajnaLista.fetch"
+	String TECAJ_FETCH_ERROR = "rispo.client.tecajnaLista.fetch.error"
+
+	String TECAJ_BURZA_MALOPRODAJNA = "001"
+	String OZNAKA_DEVIZE = "EUR"
+	String OZNAKA_HRK = "HRK"
+
+	String APL_CUT = "CUT"
+}

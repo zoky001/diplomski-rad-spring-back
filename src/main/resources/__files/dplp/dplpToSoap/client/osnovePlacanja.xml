@@ -1,0 +1,374 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:osnovePlacanjaResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <naziv>Arhitektonske,inženjerske i ostale tehničke usluge</naziv>
+        <sifOsnove>376</sifOsnove>
+      </return>
+      <return>
+        <naziv>Audiovizualne i srodne usluge</naziv>
+        <sifOsnove>381</sifOsnove>
+      </return>
+      <return>
+        <naziv>Cestovni prijevoz - putnički</naziv>
+        <sifOsnove>242</sifOsnove>
+      </return>
+      <return>
+        <naziv>Cestovni prijevoz - teretni</naziv>
+        <sifOsnove>241</sifOsnove>
+      </return>
+      <return>
+        <naziv>Cestovni prijevoz -iznajmljivanje vozila s posadom</naziv>
+        <sifOsnove>243</sifOsnove>
+      </return>
+      <return>
+        <naziv>Cestovni prijevoz, ostale usluge</naziv>
+        <sifOsnove>249</sifOsnove>
+      </return>
+      <return>
+        <naziv>Deponiranje i podizanje na osnovi mjenjačke djelatnosti</naziv>
+        <sifOsnove>923</sifOsnove>
+      </return>
+      <return>
+        <naziv>Deponiranje i podizanje strane gotovine i čekova koji glase na stranu valutu, nerezidenti</naziv>
+        <sifOsnove>921</sifOsnove>
+      </return>
+      <return>
+        <naziv>Deponiranje i podizanje strane gotovine i čekova koji glase na stranu valutu, rezidenti fizičke osobe</naziv>
+        <sifOsnove>922</sifOsnove>
+      </return>
+      <return>
+        <naziv>Depoziti</naziv>
+        <sifOsnove>870</sifOsnove>
+      </return>
+      <return>
+        <naziv>Depoziti</naziv>
+        <sifOsnove>770</sifOsnove>
+      </return>
+      <return>
+        <naziv>Dionice i ostali vlasnički ulozi, ostali kapital</naziv>
+        <sifOsnove>810</sifOsnove>
+      </return>
+      <return>
+        <naziv>Dionice i ostali vlasnički ulozi, ostali kapital</naziv>
+        <sifOsnove>710</sifOsnove>
+      </return>
+      <return>
+        <naziv>Dividende i raspodjela dobiti</naziv>
+        <sifOsnove>510</sifOsnove>
+      </return>
+      <return>
+        <naziv>Dotacije strane gotovine u zemlji</naziv>
+        <sifOsnove>953</sifOsnove>
+      </return>
+      <return>
+        <naziv>Financijske usluge, osim osiguranja</naziv>
+        <sifOsnove>340</sifOsnove>
+      </return>
+      <return>
+        <naziv>Financijski derivati</naziv>
+        <sifOsnove>880</sifOsnove>
+      </return>
+      <return>
+        <naziv>Financijski derivati</naziv>
+        <sifOsnove>780</sifOsnove>
+      </return>
+      <return>
+        <naziv>Garancija za poslove između nerezidenata</naziv>
+        <sifOsnove>865</sifOsnove>
+      </return>
+      <return>
+        <naziv>Garancije za poslove između nerezidenata</naziv>
+        <sifOsnove>765</sifOsnove>
+      </return>
+      <return>
+        <naziv>Građevinski radovi u inozemstvu</naziv>
+        <sifOsnove>320</sifOsnove>
+      </return>
+      <return>
+        <naziv>Građevinski radovi u Republici Hrvatskoj</naziv>
+        <sifOsnove>321</sifOsnove>
+      </return>
+      <return>
+        <naziv>Iseljenički transferi</naziv>
+        <sifOsnove>610</sifOsnove>
+      </return>
+      <return>
+        <naziv>Istraživanje i razvoj</naziv>
+        <sifOsnove>373</sifOsnove>
+      </return>
+      <return>
+        <naziv>Iznajmljivanje i operativni najam (leasing) prijevoznih sredstava i opreme</naziv>
+        <sifOsnove>372</sifOsnove>
+      </return>
+      <return>
+        <naziv>Iznajmljivanje zemljišta, nekretnina i poslovnih prostora</naziv>
+        <sifOsnove>525</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kamate po depozitima</naziv>
+        <sifOsnove>535</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kamate po dužničkim vrijednosnim papirima</naziv>
+        <sifOsnove>536</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kamate po kreditima</naziv>
+        <sifOsnove>530</sifOsnove>
+      </return>
+      <return>
+        <naziv>Komunikacijske usluge</naziv>
+        <sifOsnove>310</sifOsnove>
+      </return>
+      <return>
+        <naziv>Krediti</naziv>
+        <sifOsnove>750</sifOsnove>
+      </return>
+      <return>
+        <naziv>Krediti</naziv>
+        <sifOsnove>850</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupnja i prodaja strane gotovine u inozemstvu</naziv>
+        <sifOsnove>952</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupoprodaja deviza</naziv>
+        <sifOsnove>975</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupoprodaja nekretnina i zemljišta inozemstvu</naziv>
+        <sifOsnove>745</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupoprodaja nekretnina i zemljišta u republici hrvatskoj</naziv>
+        <sifOsnove>845</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupoprodaja nekretnina i zemljišta za potrebe diplomatskih predstavništava</naziv>
+        <sifOsnove>612</sifOsnove>
+      </return>
+      <return>
+        <naziv>Kupoprodaja patenata, licencija i druge nematerijalne imovine</naziv>
+        <sifOsnove>611</sifOsnove>
+      </return>
+      <return>
+        <naziv>Međudržavna suradnja</naziv>
+        <sifOsnove>631</sifOsnove>
+      </return>
+      <return>
+        <naziv>Mirovine, invalidnine i druga socijalna primanja -država</naziv>
+        <sifOsnove>651</sifOsnove>
+      </return>
+      <return>
+        <naziv>Mirovine, invalidnine i druga socijalna primanja -ostali sektori</naziv>
+        <sifOsnove>656</sifOsnove>
+      </return>
+      <return>
+        <naziv>Naknade zaposlenima - država</naziv>
+        <sifOsnove>401</sifOsnove>
+      </return>
+      <return>
+        <naziv>Naknade zaposlenima - ostali sektori</naziv>
+        <sifOsnove>405</sifOsnove>
+      </return>
+      <return>
+        <naziv>Naplata čekova</naziv>
+        <sifOsnove>951</sifOsnove>
+      </return>
+      <return>
+        <naziv>Obveznice, zadužnice i instrumenti tržišta novca</naziv>
+        <sifOsnove>830</sifOsnove>
+      </return>
+      <return>
+        <naziv>Obveznice, zadužnice i instrumenti tržišta novca</naziv>
+        <sifOsnove>730</sifOsnove>
+      </return>
+      <return>
+        <naziv>Oglašavanje i istraživanje tržišta</naziv>
+        <sifOsnove>375</sifOsnove>
+      </return>
+      <return>
+        <naziv>Ostale poslovne usluge</naziv>
+        <sifOsnove>378</sifOsnove>
+      </return>
+      <return>
+        <naziv>Ostale usluge iz domene osobnih usluga i usluga kulture i razonode</naziv>
+        <sifOsnove>382</sifOsnove>
+      </return>
+      <return>
+        <naziv>Ostale usluge povezane s trgovinom</naziv>
+        <sifOsnove>371</sifOsnove>
+      </return>
+      <return>
+        <naziv>Ostali transferi</naziv>
+        <sifOsnove>690</sifOsnove>
+      </return>
+      <return>
+        <naziv>Otkup i prodaja strane gotovine i čekova koji glase na stranu valutu, nerezidenti fizičke osobe</naziv>
+        <sifOsnove>911</sifOsnove>
+      </return>
+      <return>
+        <naziv>Otkup i prodaja strane gotovine i čekova koji glase na stranu valutu, rezidenti fizičke osobe</naziv>
+        <sifOsnove>912</sifOsnove>
+      </return>
+      <return>
+        <naziv>Otkup razlike od ovlaštenih mjenjača</naziv>
+        <sifOsnove>913</sifOsnove>
+      </return>
+      <return>
+        <naziv>Patenti i licencije</naziv>
+        <sifOsnove>360</sifOsnove>
+      </return>
+      <return>
+        <naziv>Platne kartice</naziv>
+        <sifOsnove>291</sifOsnove>
+      </return>
+      <return>
+        <naziv>Poljoprivredne i rudarske usluge te ostale usluge prerade na terenu</naziv>
+        <sifOsnove>377</sifOsnove>
+      </return>
+      <return>
+        <naziv>Pomoć i pokloni - država</naziv>
+        <sifOsnove>632</sifOsnove>
+      </return>
+      <return>
+        <naziv>Pomoć i pokloni - ostali sektori</naziv>
+        <sifOsnove>636</sifOsnove>
+      </return>
+      <return>
+        <naziv>Pomorski prijevoz</naziv>
+        <sifOsnove>210</sifOsnove>
+      </return>
+      <return>
+        <naziv>Popravci</naziv>
+        <sifOsnove>399</sifOsnove>
+      </return>
+      <return>
+        <naziv>Porezi i pristojbe - država</naziv>
+        <sifOsnove>641</sifOsnove>
+      </return>
+      <return>
+        <naziv>Porezi i pristojbe - ostali sektori</naziv>
+        <sifOsnove>646</sifOsnove>
+      </return>
+      <return>
+        <naziv>Potraživanja iz osiguranja</naziv>
+        <sifOsnove>332</sifOsnove>
+      </return>
+      <return>
+        <naziv>Pravne, računovodstvene i konzultantske usluge</naziv>
+        <sifOsnove>374</sifOsnove>
+      </return>
+      <return>
+        <naziv>Premije osiguranja</naziv>
+        <sifOsnove>331</sifOsnove>
+      </return>
+      <return>
+        <naziv>Prijenos sredstava iz naplatne u isplatnu banku</naziv>
+        <sifOsnove>980</sifOsnove>
+      </return>
+      <return>
+        <naziv>Prijenosi u okviru deviznih i kunskih nerezidentnih računa u zemlji</naziv>
+        <sifOsnove>974</sifOsnove>
+      </return>
+      <return>
+        <naziv>Prijevoz i prijenos cjevovodima i dalekovodima</naziv>
+        <sifOsnove>260</sifOsnove>
+      </return>
+      <return>
+        <naziv>Putovanja - turizam, doznake</naziv>
+        <sifOsnove>281</sifOsnove>
+      </return>
+      <return>
+        <naziv>Putovanja - turizam, ostala plaćanja</naziv>
+        <sifOsnove>290</sifOsnove>
+      </return>
+      <return>
+        <naziv>Putovanja - turizam, prodaja efektivnih kuna inozemstvu</naziv>
+        <sifOsnove>289</sifOsnove>
+      </return>
+      <return>
+        <naziv>Računalne i informacijske usluge</naziv>
+        <sifOsnove>350</sifOsnove>
+      </return>
+      <return>
+        <naziv>Realizirane činidbene garancije</naziv>
+        <sifOsnove>680</sifOsnove>
+      </return>
+      <return>
+        <naziv>Riječni prijevoz</naziv>
+        <sifOsnove>250</sifOsnove>
+      </return>
+      <return>
+        <naziv>Roba</naziv>
+        <sifOsnove>110</sifOsnove>
+      </return>
+      <return>
+        <naziv>Roba za opskrbu prijevoznih sredstava</naziv>
+        <sifOsnove>140</sifOsnove>
+      </return>
+      <return>
+        <naziv>Sindicirani krediti</naziv>
+        <sifOsnove>867</sifOsnove>
+      </return>
+      <return>
+        <naziv>Sindicirani krediti</naziv>
+        <sifOsnove>767</sifOsnove>
+      </return>
+      <return>
+        <naziv>Službena putovanja</naziv>
+        <sifOsnove>285</sifOsnove>
+      </return>
+      <return>
+        <naziv>Sredstva u reklamaciji kod banke</naziv>
+        <sifOsnove>981</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transakcije između domaćih poduzeća i njihovih inozemnih podružnica</naziv>
+        <sifOsnove>700</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transakcije između inozemnih poduzeća i njihovih podružnica u republici hrvatskoj</naziv>
+        <sifOsnove>800</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transfer deviza između banaka</naziv>
+        <sifOsnove>972</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transfer deviza između hrvatske narodne banke i banke</naziv>
+        <sifOsnove>971</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transfer deviza unutar banke</naziv>
+        <sifOsnove>973</sifOsnove>
+      </return>
+      <return>
+        <naziv>Transferi s osnove osiguranja</naziv>
+        <sifOsnove>660</sifOsnove>
+      </return>
+      <return>
+        <naziv>Usluge dorade robe</naziv>
+        <sifOsnove>398</sifOsnove>
+      </return>
+      <return>
+        <naziv>Usluge države</naziv>
+        <sifOsnove>390</sifOsnove>
+      </return>
+      <return>
+        <naziv>Više osnova</naziv>
+        <sifOsnove>999</sifOsnove>
+      </return>
+      <return>
+        <naziv>Zračni prijevoz</naziv>
+        <sifOsnove>220</sifOsnove>
+      </return>
+      <return>
+        <naziv>Željeznički prijevoz</naziv>
+        <sifOsnove>230</sifOsnove>
+      </return>
+    </ns2:osnovePlacanjaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

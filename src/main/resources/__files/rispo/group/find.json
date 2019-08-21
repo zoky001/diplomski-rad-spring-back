@@ -1,0 +1,220 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 237,
+      "name": "INA GRUPA",
+      "kpo": "254KPO",
+      "mb": null,
+      "jmbg": null,
+      "oib": null,
+      "application": "RISPO",
+      "status": "IN_PROGRESS",
+      "progress": 100,
+      "reportDate": {
+        "dayOfMonth": 20,
+        "year": 2016,
+        "dayOfWeek": 2,
+        "era": 1,
+        "dayOfYear": 264,
+        "weekyear": 2016,
+        "monthOfYear": 9,
+        "centuryOfEra": 20,
+        "yearOfEra": 2016,
+        "yearOfCentury": 16,
+        "weekOfWeekyear": 38,
+        "hourOfDay": 0,
+        "minuteOfHour": 0,
+        "secondOfMinute": 0,
+        "millisOfSecond": 0,
+        "minuteOfDay": 0,
+        "millisOfDay": 0,
+        "secondOfDay": 0,
+        "millis": 1474322400000,
+        "zone": {
+          "fixed": false,
+          "uncachedZone": {
+            "fixed": false,
+            "cachable": true,
+            "id": "Europe/Belgrade"
+          },
+          "id": "Europe/Belgrade"
+        },
+        "chronology": {
+          "zone": {
+            "fixed": false,
+            "uncachedZone": {
+              "fixed": false,
+              "cachable": true,
+              "id": "Europe/Belgrade"
+            },
+            "id": "Europe/Belgrade"
+          }
+        },
+        "beforeNow": true,
+        "afterNow": false,
+        "equalNow": false
+      },
+      "owner": "tris001",
+      "members": null,
+      "total": {
+        "id": null,
+        "brojPartije": null,
+        "brojUgovora": null,
+        "brojLimita": null,
+        "brojOkvira": null,
+        "balanceHrk": 0,
+        "balanceEur": 0,
+        "changeHrk": 0,
+        "changeEur": 0,
+        "collaterals": [],
+        "commited": false,
+        "interestRate": null,
+        "intRate": null,
+        "fees": null,
+        "lessThanYear": false,
+        "plasmanType": null,
+        "previousHrk": 0,
+        "previousEur": 0,
+        "proposedHrk": 0,
+        "proposedEur": 0,
+        "riskClass": null,
+        "securedBalanceHrk": 0,
+        "securedBalanceEur": 0,
+        "securedPreviousHrk": 0,
+        "securedPreviousEur": 0,
+        "securedProposedHrk": 0,
+        "securedProposedEur": 0,
+        "source": "MI",
+        "spread": 0,
+        "taker": null,
+        "tenor": null,
+        "typeOfCredit": null,
+        "selected": false,
+        "isNew": false,
+        "clientId": null,
+        "owner": null,
+        "grouped": false,
+        "groupedExposureId": null,
+        "groupedClientId": null,
+        "tip": 99,
+        "newChange": 0,
+        "newBalance": 0,
+        "newPrevious": 0,
+        "newProposed": 0,
+        "newSecuredBalance": 0,
+        "newSecuredPrevious": 0,
+        "newSecuredProposed": 0,
+        "displayed": true,
+        "lessThanYearAsString": "-",
+        "anyPlacementChangedHrk": false,
+        "anyPlacementChangedEur": false,
+        "tenorLaterThanToday": true,
+        "tenorDate": {
+          "dayOfMonth": 2,
+          "year": 2018,
+          "dayOfWeek": 2,
+          "era": 1,
+          "dayOfYear": 275,
+          "weekyear": 2018,
+          "monthOfYear": 10,
+          "centuryOfEra": 20,
+          "yearOfEra": 2018,
+          "yearOfCentury": 18,
+          "weekOfWeekyear": 40,
+          "hourOfDay": 15,
+          "minuteOfHour": 41,
+          "secondOfMinute": 20,
+          "millisOfSecond": 931,
+          "minuteOfDay": 941,
+          "millisOfDay": 56480931,
+          "secondOfDay": 56480,
+          "millis": 1538487680931,
+          "zone": {
+            "fixed": false,
+            "uncachedZone": {
+              "fixed": false,
+              "cachable": true,
+              "id": "Europe/Belgrade"
+            },
+            "id": "Europe/Belgrade"
+          },
+          "chronology": {
+            "zone": {
+              "fixed": false,
+              "uncachedZone": {
+                "fixed": false,
+                "cachable": true,
+                "id": "Europe/Belgrade"
+              },
+              "id": "Europe/Belgrade"
+            }
+          },
+          "beforeNow": false,
+          "afterNow": false,
+          "equalNow": true
+        },
+        "conditions": "0",
+        "class": "hr.zaba.ewm.rispo.model.exposure.Exposure"
+      },
+      "creationDate": {
+        "dayOfMonth": 20,
+        "year": 2016,
+        "dayOfWeek": 2,
+        "era": 1,
+        "dayOfYear": 264,
+        "weekyear": 2016,
+        "monthOfYear": 9,
+        "centuryOfEra": 20,
+        "yearOfEra": 2016,
+        "yearOfCentury": 16,
+        "weekOfWeekyear": 38,
+        "hourOfDay": 10,
+        "minuteOfHour": 3,
+        "secondOfMinute": 53,
+        "millisOfSecond": 0,
+        "minuteOfDay": 603,
+        "millisOfDay": 36233000,
+        "secondOfDay": 36233,
+        "millis": 1474358633000,
+        "zone": {
+          "fixed": false,
+          "uncachedZone": {
+            "fixed": false,
+            "cachable": true,
+            "id": "Europe/Belgrade"
+          },
+          "id": "Europe/Belgrade"
+        },
+        "chronology": {
+          "zone": {
+            "fixed": false,
+            "uncachedZone": {
+              "fixed": false,
+              "cachable": true,
+              "id": "Europe/Belgrade"
+            },
+            "id": "Europe/Belgrade"
+          }
+        },
+        "beforeNow": true,
+        "afterNow": false,
+        "equalNow": false
+      },
+      "currency": "HRK",
+      "djelomicanDohvat": false,
+      "dohvatPoPostojecimClanicama": false,
+      "orgJed": "01470500  ",
+      "intRateHRK": 0,
+      "intRateEUR": 0,
+      "feesHRK": 0,
+      "feesEUR": 0,
+      "locked": false,
+      "reportDateAsString": "20.09.2016.",
+      "creationDateAsString": "20.09.2016. 10:03",
+      "exposureViewForEditView": "Dohvat po povijesnim članicama grupe",
+      "exposureView": "-",
+      "class": "hr.zaba.ewm.rispo.model.group.Group"
+    }
+  ]
+}

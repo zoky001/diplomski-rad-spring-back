@@ -1,0 +1,150 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:valuteSTecajniceResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>čESKA KRUNA</hrvNaziv>
+        <oznaka>CZK</oznaka>
+        <sifValute>203</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>šVEDSKA KRUNA</hrvNaziv>
+        <oznaka>SEK</oznaka>
+        <sifValute>752</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>šVICARSKI FRANAK</hrvNaziv>
+        <oznaka>CHF</oznaka>
+        <sifValute>756</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>AMERICKI DOLAR</hrvNaziv>
+        <oznaka>USD</oznaka>
+        <sifValute>840</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>AUSTRALSKI DOLAR</hrvNaziv>
+        <oznaka>AUD</oznaka>
+        <sifValute>036</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>BUGARSKI LEV</hrvNaziv>
+        <oznaka>BGN</oznaka>
+        <sifValute>975</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>DANSKA KRUNA</hrvNaziv>
+        <oznaka>DKK</oznaka>
+        <sifValute>208</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>EURO</hrvNaziv>
+        <oznaka>EUR</oznaka>
+        <sifValute>978</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>FORINTA</hrvNaziv>
+        <oznaka>HUF</oznaka>
+        <sifValute>348</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>FUNTA STERLINGA</hrvNaziv>
+        <oznaka>GBP</oznaka>
+        <sifValute>826</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>HONGKONšKI DOLAR</hrvNaziv>
+        <oznaka>HKD</oznaka>
+        <sifValute>344</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>0</brDecimalnihMjesta>
+        <hrvNaziv>JEN</hrvNaziv>
+        <oznaka>JPY</oznaka>
+        <sifValute>392</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>JUAN RENMINBI</hrvNaziv>
+        <oznaka>CNY</oznaka>
+        <sifValute>156</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>KANADSKI DOLAR</hrvNaziv>
+        <oznaka>CAD</oznaka>
+        <sifValute>124</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>KONVERTIBILNA MARKA</hrvNaziv>
+        <oznaka>BAM</oznaka>
+        <sifValute>977</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>KUNA</hrvNaziv>
+        <oznaka>HRK</oznaka>
+        <sifValute>191</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>NORVEšKA KRUNA</hrvNaziv>
+        <oznaka>NOK</oznaka>
+        <sifValute>578</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>NOVOZELANDSKI DOLAR</hrvNaziv>
+        <oznaka>NZD</oznaka>
+        <sifValute>554</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>RUMUNJSKI LEU</hrvNaziv>
+        <oznaka>RON</oznaka>
+        <sifValute>946</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>RUSKI RUBALJ</hrvNaziv>
+        <oznaka>RUB</oznaka>
+        <sifValute>643</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>SINGAPURSKI DOLAR</hrvNaziv>
+        <oznaka>SGD</oznaka>
+        <sifValute>702</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>SRPSKI DINAR</hrvNaziv>
+        <oznaka>RSD</oznaka>
+        <sifValute>941</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>TURSKA LIRA</hrvNaziv>
+        <oznaka>TRY</oznaka>
+        <sifValute>949</sifValute>
+      </return>
+      <return>
+        <brDecimalnihMjesta>2</brDecimalnihMjesta>
+        <hrvNaziv>ZLOTI</hrvNaziv>
+        <oznaka>PLN</oznaka>
+        <sifValute>985</sifValute>
+      </return>
+    </ns2:valuteSTecajniceResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

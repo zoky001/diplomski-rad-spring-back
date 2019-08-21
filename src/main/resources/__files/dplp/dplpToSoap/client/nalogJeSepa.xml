@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <ns2:nalogJeSepaResponse xmlns:ns2="http://soap.dplp.zaba.hr/">
+      <return>
+        <errMess></errMess>
+        <indik>1</indik>
+        <poruka></poruka>
+      </return>
+    </ns2:nalogJeSepaResponse>
+  </soapenv:Body>
+</soapenv:Envelope>
